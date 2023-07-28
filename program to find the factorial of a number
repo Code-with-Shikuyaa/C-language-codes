@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main() {
+    int num, i;
+    unsigned long long factorial = 1;
+
+    printf("Enter a positive integer: ");
+    scanf("%d", &num);
+
+    if (num == 0 || num == 1) 
+    {
+        printf("Factorial of %d is 1.", num);
+    } 
+    else 
+    {
+        for (i = 2; i <= num; i++) {
+            factorial *= i;
+        }
+        printf("Factorial of %d is %llu.", num, factorial);
+    }
+    return 0;
+}
